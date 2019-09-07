@@ -1,0 +1,10 @@
+{% if latest_album_list %}
+    <ul>
+	<h1>Albums:</h1>
+    {% for album in latest_album_list %}
+		<li><a href="/music/{{ album.id }}/">{{ album.album_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No albums are available.</p>
+{% endif %}
